@@ -19,3 +19,19 @@ for(let i=0; i<=5; i++){
 }
 
 
+const FullName = new String('AmarShivajiPisal')
+console.log(FullName[4]);
+console.table([FullName.__proto__ , FullName.length , FullName.toUpperCase , FullName.charAt('A')])
+const newString = FullName.slice(0,5);
+console.log(newString);
+
+const newSubString = FullName.substring(0,5)        
+console.log("SubString is " +newSubString);
+
+let newStringTwo = '   Amar   ';
+console.log(newStringTwo);          //Prnt with space
+console.log(newStringTwo.trim());       //Errase Space in String
+let DeclareString = 'WorkSpace';
+let StringBlink = DeclareString.blink()
+let StringBolt = DeclareString.bold();
+console.table([StringBlink , StringBolt],)
