@@ -1,29 +1,90 @@
-// Make Array
-const arr = [12, 4, 65, 76];
-console.log(arr[3]); // Access array
+// SingleTon
+const dashLine = "__________________________________________________"
+// Object Literals
+const mySym = Symbol("Un1")
+const JsUser ={
+    name : "Amar",
+    [mySym] : "Un",
+    age : 18,
+    location : "Wai,Maharashtra",
+    email : "amarpisal8@gmail.com",
+    isLogin : false,
+    LastLoginDays : ["Sunday" , "Monday", "Friday"]
+}
+console.log(JsUser.age);
+console.log(JsUser["age"]);         //Square Notition Access : Access Multiword Key's and Symbol
+console.log(JsUser[mySym]);     //Print the value of symbol using Sqare Notition
+//Overide 
+JsUser.location = "Satara";
+console.log(JsUser.location);
+JsUser.greeting = function(){
+    console.log("Hello JS 😂");
+}
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user ${this.name} and your age is ${this.age} 😂`);
+}
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
+Object.freeze(JsUser)           //From now you cant overide any data from JsUsect
+JsUser.age = 28;
+console.log(JsUser.age);        //age will not be change.age still 18
 
-// Methods
-const HerosMarvel = ["Ironman", "Thor", "Spiderman", "Hulk"];
-HerosMarvel.push("Rocket"); // push element in the last
-console.log(HerosMarvel.length); // find the length of the array
-HerosMarvel.unshift("Captain America"); // to add the first element
-HerosMarvel.shift();                    //Remove first element of array
-console.log(HerosMarvel.includes("Ironmen"));       //weather check element exist in arrya
-console.log(HerosMarvel.indexOf("Hulk"));   //If target element found shown index number else show -1
-console.log(HerosMarvel.join());        //we can convert any type of Data types Array to string
-const DC_heroS = ["Batmen","Flash","DeadPool"]
-HerosMarvel.push(DC_heroS);         //we can push overall array
-const newArray = HerosMarvel.slice("Antmen" , "Root")
-console.log(`new array is ${newArray} `);
-console.log(HerosMarvel);
+console.log(dashLine);
+// SingleTon
 
-const ArrayInArray = [12,23,[1,2,3] , 42,53,91, [-1,-2,-3]];
-console.log(ArrayInArray.flat(Infinity));   //some time we have multiple array in single array.you can flat mean converted to single array using this function
-console.log(Array.isArray(ArrayInArray))    //weather check it is array
-console.log(Array.from("Amar"));
 
-const val1 = 12;
-const val2 = 23;
-const val3 = 22;
-console.log(Array.of(val1, val2, val3));
-console.log(Array.from(val1,val2,val3));
+const StudentObj = {
+    name : {
+        firstName : "Amar",
+        midName : "Shivaji",
+        lastName : "Pisal"
+    },
+    address : {
+        AtPost : "Vyajwadi",
+        Tal : "Wai",
+        Dist : "Satara",
+        PinCode : 412803
+    },
+    contact : {
+        email : {
+            first : "amar@gm.com",
+            secound : "amar@ot.com"
+        },
+        mobile_number : {
+            phone1 : 90277712,
+            phone2 : 7887717
+        } 
+    }
+}
+
+console.log(StudentObj.name.lastName);
+const sr1  = {
+    char1 : "Jaydeep",
+    char2 : "Gouri"
+}
+const sr2 = {
+    char3 : "babu",
+    char4 : "raju"
+}
+
+//concat two object :
+const srs = Object.assign({}, sr1 , sr2)
+console.log(srs);
+const srs2 = {...sr2 , ...sr1}
+console.log(srs2);
+console.log(StudentObj);
+const ArrayObj = {
+    Intfirst : [1,2,3,4,5],
+    StrTwo : ["Amar" , "Abhay" , "Amit" , "Ankush", "Sandip"]
+}
+
+for(let i=0; i<5; i++){
+    console.log(ArrayObj.Intfirst[i]);
+    console.log(ArrayObj.StrTwo[i]);
+}
+console.log(Object.keys(StudentObj));           //get object key
+console.log(Object.values(StudentObj));         //get objct value
+console.log(Object.entries(sr1));
+// Returns an array of key/values of the enumerable properties of an object
+//Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+console.log(StudentObj.hasOwnProperty("name"));     //ask following proprty is your to Object
