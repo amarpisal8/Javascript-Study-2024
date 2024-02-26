@@ -88,3 +88,37 @@ console.log(Object.entries(sr1));
 // Returns an array of key/values of the enumerable properties of an object
 //Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 console.log(StudentObj.hasOwnProperty("name"));     //ask following proprty is your to Object
+console.log(dashLine);
+// Object Destructiring
+const SSCStudent = {
+    student1 : {
+        name : "Ramesh",
+        age : 16,
+        gender : "M",
+        marks : {
+            Marathi : 78,
+            English : 92,
+            Hindi : 85,
+            social_science : {
+                    History : 70,
+                    Economis : 86
+            }
+        }
+    },
+    student2 : {
+        name : "Priyanka",
+        age : 16,
+        gender : "F",
+        marks : {
+            Marathi : 92,
+            English : 99,
+            Hindi : 84,
+            social_science : {
+                    History : 79,
+                    Economis : 76
+            }
+        }
+
+    }
+}
+
