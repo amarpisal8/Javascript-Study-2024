@@ -122,3 +122,5 @@ const SSCStudent = {
     }
 }
 
+const {name : stName} = SSCStudent;
+console.log(stName);
