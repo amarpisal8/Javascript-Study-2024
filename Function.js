@@ -21,6 +21,19 @@ function ReturnObj (anyObj) {
 ReturnObj(obj)
 add(1,"null")
 
-let a = 10              
-const b = 100           //b is constant he can not reasign the value of b
-var c = 1000            //c can not declare var again in global scope
+//Arrow Functions
+const user = {
+    userName : "Amar",
+    price : 1000,
+    welcomeMessage : function(){
+        console.log(`${this.userName} , Welcome to website`);
+    }
+}
+
+user.welcomeMessage()
+
+
+function chai () {
+    console.log(this);
+}
+chai();
