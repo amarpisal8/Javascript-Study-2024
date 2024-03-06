@@ -37,3 +37,16 @@ function chai () {
     console.log(this);
 }
 chai();
+
+const NewArrow = () =>{
+    let userName = "amar";
+    console.log(this);
+}
+NewArrow();
+
+const Addition = (a , b) =>{
+    return a + b;
+}
+console.log(Addition(2,3));
+// use return keyword under curly breses() else not in parathenthises
+// for eg
