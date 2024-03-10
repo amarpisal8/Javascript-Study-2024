@@ -1,17 +1,13 @@
-var obj = {
+function fun1(a){
 
-  val: 100
+  const fun2 = (b) => {
   
-  }
+  a = a + b;
   
-  function fun(a, b , c){
+  console.log(a)
   
-  console.log(this.val + a + b + c)
-  
-  }
-  
-  const fun2 = fun.bind(obj)
+  }}
   
   
   
-  fun2(1, 2,3)
+  fun1(10)(30)
