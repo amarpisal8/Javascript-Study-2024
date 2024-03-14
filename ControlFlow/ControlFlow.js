@@ -45,3 +45,10 @@ if (userEmail) {
 // condition ? true : false;
 const iceTeaPr = 79;
 iceTeaPr <= 80 ? console.log("Less than 80") : console.log("More than 80")
+
+//    > : Greater Than
+//    < : Less Than
+//    = : assign
+//    == : isEqualTo
+//    != : Not Equal to
+//    === : Check eual to with type
